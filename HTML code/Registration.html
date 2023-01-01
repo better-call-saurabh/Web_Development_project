@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="/image/favicon.png">
+    <style>
+        body{
+            /* background-image: url(/image/OIP.jfif); */
+            background-position: center;
+            background-size: cover;
+            margin-top: 40px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .reg{
+            width: 250px;
+            background-color:transparent;
+            color: rgb(10, 218, 250);
+            margin: auto;
+            padding: 0px 0px 0px 0px;
+            text-align: center;
+            border-radius: 15px 15px 0px 0px;
+            opacity: 1;
+        }
+
+        .form{
+            background-color : transparent;
+            
+            width: 700px;
+            height: 500px;
+            margin: auto;
+            padding: 10px;
+            opacity: 1;
+        }
+
+        .Text_inf{
+            margin-top: 15px;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: rgb(247, 98, 23);
+            font-size: 15px;
+            font-weight: 400
+        }
+
+        .selection{
+            margin-top: 10px;
+            margin-left: 15px;
+            color: brown;
+            font-size: 30px;
+        }
+
+        .nameStu{
+            position: absolute;
+            left:510px;
+            top:110px;
+            line-height: 20px;
+            border-radius: 6px;
+            padding: 0 20px; 
+            font-size: 16px;
+        }
+
+        .contact{
+            position: absolute;
+            left:510px;
+            top:160px;
+            line-height: 20px;
+            border-radius: 6px;
+            padding: 0 20px; 
+            font-size: 16px;
+        }
+
+        .mail{
+            position: absolute;
+            left:510px;
+            top:210px;
+            line-height: 20px;
+            border-radius: 6px;
+            padding: 0 20px; 
+            font-size: 16px;
+        }
+
+        .birth{
+            position: absolute;
+            left:510px;
+            top:260px;
+            line-height: 20px;
+            border-radius: 6px;
+            padding: 0 20px; 
+            font-size: 16px; 
+        }
+
+        .catch{
+            position: relative;
+            left: 80px;
+            line-height: 20px;
+            width: 500px;
+            height: 30px;
+            border-radius: 6px;
+            padding: 0 22px;
+            font-size: 16px;
+            color: blueviolet;
+            outline: none;
+            /* overflow: hidden; */
+        }
+
+        .last{
+            background-color: aqua;
+            color: black;
+            position: absolute;
+            left:700px;
+            display: block;
+            /* top:210px; */
+            line-height: 30px;
+            border-radius: 6px;
+            padding: 0 20px; 
+            font-size: 16px; 
+            cursor: grab;
+            transition: 0.5s;
+        }
+
+        .last:hover{
+            background-color: blanchedalmond;
+        }
+
+        .Gen{
+            position: relative;
+            left:70px;
+            /* top:160px; */
+            color: rgb(248, 113, 10);
+            line-height: 20px;
+            font-size: 20px;
+            border-radius: 6px;
+            padding: 0 20px; 
+            font-size: 16px;
+        }
+
+    </style>
+
+</head>
+<body bgcolor="#e2e2d9">
+
+    <div class="reg"> 
+    <h2> Registeration Form </h2> 
+    </div>
+
+    <div class="form">
+    <form>
+
+    <div class="Text_inf">
+    Name: <input class="nameStu" type="text" name="first_name" size="50" required> 
+    </div>
+    <br>
+
+    <div class="Text_inf">
+        Contact No. <input class="contact" type="number" name="Contact" size="10" required> 
+    </div>
+    <br>
+
+    <div class="Text_inf">
+        Email id:<input class="mail" type="text" name="MyEmail" size="50" required>
+    </div>
+    <br>
+
+    <div class="Text_inf">
+        Date of Birth: <input class="birth" type="date" name="Contact" required> 
+    </div>
+    <br>
+
+    <div class="selection">
+        <label for="sport"></label>
+        <select class="catch" name="Mysport" required>
+            <option disabled="disabled" selected="selected"> Choose your sport </option>
+            <option> Hockey </option>
+            <option> Cricket </option>
+            <option> Football </option>
+            <option> Volleyball </option>
+            <option> Badminton </option>
+            <option> Tennis </option>
+            <option> Table Tennis </option>
+            <option> Athletics </option>
+            <option> Cycling </option>
+            <option> Boxing </option>
+            <option> Shooting </option>
+            <option> Archery </option>
+            
+        </select>
+    </div>
+    <br>
+    <br>
+
+    <div class="Gen">
+        Gender: 
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+    </div>
+    <br>
+
+    <div class="Text_inf">
+        <input class="last" type="submit" name="Sub" value="Register" onclick="alert('Submitted Succesfully')">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contain{
+            float:left;
+            display:inline-block;
+        }
+
+        .forImg{
+            float:left;
+            padding: 30px;
+            /* width:20%; */
+        }
+
+        .fortext{
+            float:right;
+            /* width:40%; */
+            display:block;
+            padding-right: 1500px;
+            padding-top: 50px;
+            text-align: justify;
+        }
+
+        table{
+            padding-right: 1000px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td{
+            /* margin:5px; */
+            padding: 5px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #D6EEEE;
+        }
+
+        .table1{
+            padding-left: 30px;
+            float:left;
+        }
+
+        .table2{
+            padding-right:100px;
+            padding-left: 210px;
+            float:left;
+        }
+
+        .table3{
+            /* padding-top:0px; */
+            padding-right: 10px; 
+            padding-left: 100px;
+            float:left;
+        }
+
+        .wrap-flex{
+            display:flex;
+            padding-top: 110px;
+            padding-left: 10px;
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+
+        .shuffle{
+            margin:0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+
+        .slider{
+            width:800px;
+            height:500px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .slides{
+            width: 500%;
+            height: 500px;
+            display: flex;
+        }
+
+        .slides input{
+            display: none;
+        }
+
+        .slide{
+            width: 20%;
+            transition: 2s;
+        }
+
+        .slide img{
+            border-radius: 10px;
+            width: 800px;
+            height: 500px;
+        }
+
+        .navigation-manual{
+            position: absolute;
+            width: 800px;
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .manual-but{
+            border: 2px solid #e2e2d9;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 2s;
+        }
+
+        .manual-but:not(:last-child){
+            margin-right: 40px;
+        }
+
+        .manual-but:hover{
+            background: #e2e2d9;
+        }
+
+        #radio1:checked ~ .first{
+            margin-left: 0;
+        }
+
+        #radio2:checked ~ .first{
+            margin-left: -20%;
+        }
+
+        #radio3:checked ~ .first{
+            margin-left: -40%;
+        }
+
+        #radio4:checked ~ .first{
+            margin-left: -60%;
+        }
+
+        .navigation-auto{
+            position: absolute;
+            display: flex;
+            width: 800px;
+            justify-content: center;
+            margin-top: 460px;
+        }
+
+        .navigation-auto div{
+            border: 2px solid #e2e2d9;
+            padding: 5px;
+            border-radius: 10px;
+            transition: 3s;
+        }
+
+        .navigation-auto div:not(:last-child){
+            margin-right: 40px;
+        }
+
+        #radio1:checked ~ .navigation-auto .auto-but1{
+            background: #e2e2d9;
+        }
+
+        #radio2:checked ~ .navigation-auto .auto-but2{
+            background: #e2e2d9;
+        }
+
+        #radio3:checked ~ .navigation-auto .auto-but3{
+            background: #e2e2d9;
+        }
+
+        #radio4:checked ~ .navigation-auto .auto-but4{
+            background: #e2e2d9;
+        }
+
+    </style>
+
+</head>
+<body bgcolor="#e2e2d9">
+    <div class="contain">
+        <span class="forImg">
+            <img src="./Main image/MainCricket.jfif">
+        </span>
+
+        <span class="forText">
+            <p style="text-align:justify">
+                <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptas odit cum? Aperiam quia laborum 
+                voluptatibus odit labore est. Minima laudantium, officiis aliquam eos repellendus hic obcaecati suscipit 
+                aliquid totam.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse laudantium inventore possimus dolores ut dolore. Obcaecati, sit, expedita quam iste laborum mollitia sint adipisci porro laudantium architecto maiores modi iusto?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia magni qui dignissimos quae repellendus ab atque dicta, quasi ullam autem exercitationem veniam minus provident suscipit consequuntur beatae voluptatem? Accusamus, corrupti.
+            </p>
+        </span>
+    </div>
+    
+    <div class="wrap-flex">
+        <span class="table1">
+        <table>
+            <tr>
+                <th> Sr No. </th>
+                <th> Recent Matches </th>
+                <th> Winner </th>
+                <th> Score </th>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> Lucknow VS Ranchi </td>
+                <td> Lucknow </td>
+                <td> Luc:176/5 <br> Ran:172/8 </td>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> Lucknow VS Ranchi </td>
+                <td> Lucknow </td>
+                <td> Luc:176/5 <br> Ran:172/8 </td>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> Lucknow VS Ranchi </td>
+                <td> Lucknow </td>
+                <td> Luc:176/5 <br> Ran:172/8 </td>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> Lucknow VS Ranchi </td>
+                <td> Lucknow </td>
+                <td> Luc:176/5 <br> Ran:172/8 </td>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> Lucknow VS Ranchi </td>
+                <td> Lucknow </td>
+                <td> Luc:176/5 <br> Ran:172/8 </td>
+            </tr>
+        </table>
+        </span>
+        
+        <span class="table2">
+            <table>
+                <tr>
+                    <th> Sr No. </th>
+                    <th> Recent Matches </th>
+                    <th> Winner </th>
+                    <th> Score </th>
+                </tr>
+                <tr>
+                    <td> 1 </td>
+                    <td> Lucknow VS Ranchi </td>
+                    <td> Lucknow </td>
+                    <td> Luc:176/5 <br> Ran:172/8 </td>
+                </tr>
+                <tr>
+                    <td> 1 </td>
+                    <td> Lucknow VS Ranchi </td>
+                    <td> Lucknow </td>
+                    <td> Luc:176/5 <br> Ran:172/8 </td>
+                </tr>
+                <tr>
+                    <td> 1 </td>
+                    <td> Lucknow VS Ranchi </td>
+                    <td> Lucknow </td>
+                    <td> Luc:176/5 <br> Ran:172/8 </td>
+                </tr>
+                <tr>
+                    <td> 1 </td>
+                    <td> Lucknow VS Ranchi </td>
+                    <td> Lucknow </td>
+                    <td> Luc:176/5 <br> Ran:172/8 </td>
+                </tr>
+                <tr>
+                    <td> 1 </td>
+                    <td> Lucknow VS Ranchi </td>
+                    <td> Lucknow </td>
+                    <td> Luc:176/5 <br> Ran:172/8 </td>
+                </tr>
+            </table>
+            </span>
+
+            <span class="table3">
+                <table>
+                    <tr>
+                        <th> Sr No. </th>
+                        <th> Recent Matches </th>
+                        <th> Winner </th>
+                        <th> Score </th>
+                    </tr>
+                    <tr>
+                        <td> 1 </td>
+                        <td> Lucknow VS Ranchi </td>
+                        <td> Lucknow </td>
+                        <td> Luc:176/5 <br> Ran:172/8 </td>
+                    </tr>
+                    <tr>
+                        <td> 1 </td>
+                        <td> Lucknow VS Ranchi </td>
+                        <td> Lucknow </td>
+                        <td> Luc:176/5 <br> Ran:172/8 </td>
+                    </tr>
+                    <tr>
+                        <td> 1 </td>
+                        <td> Lucknow VS Ranchi </td>
+                        <td> Lucknow </td>
+                        <td> Luc:176/5 <br> Ran:172/8 </td>
+                    </tr>
+                    <tr>
+                        <td> 1 </td>
+                        <td> Lucknow VS Ranchi </td>
+                        <td> Lucknow </td>
+                        <td> Luc:176/5 <br> Ran:172/8 </td>
+                    </tr>
+                    <tr>
+                        <td> 1 </td>
+                        <td> Lucknow VS Ranchi </td>
+                        <td> Lucknow </td>
+                        <td> Luc:176/5 <br> Ran:172/8 </td>
+                    </tr>
+                </table>
+                </span>
+    </div>
+
+   <div class="shuffle">
+   <div class="slider">
+      <div class="slides">
+        <input type="radio" name="but1" id="radio1"> 
+        <input type="radio" name="but2" id="radio2"> 
+        <input type="radio" name="but3" id="radio3"> 
+        <input type="radio" name="but4" id="radio4"> 
+
+        <div class="slide first">
+            <img src="/Shuffle image/CricketShuffle1.jfif" alt=" ">
+        </div>
+
+        <div class="slide">
+            <img src="/Shuffle image/CricketShuffle2.jfif" alt=" ">
+        </div>
+
+        <div class="slide">
+            <img src="/Shuffle image/CricketShuffle3.jfif" alt=" ">
+        </div>
+
+        <div class="slide">
+            <img src="/Shuffle image/CricketShuffle4.jfif" alt=" ">
+        </div>
+
+        <div class="navigation-auto">
+            <div class="auto-but1"> </div>
+            <div class="auto-but2"> </div>
+            <div class="auto-but3"> </div>
+            <div class="auto-but4"> </div>
+        </div>
+
+      </div>
+
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-but"> </label>
+        <label for="radio2" class="manual-but"> </label>
+        <label for="radio3" class="manual-but"> </label>
+        <label for="radio4" class="manual-but"> </label>
+      </div>
+      </div>
+   </div>
+
+   <script type="text/javascript">
+    var counter=1;
+    setInterval(function(){
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+        if(counter>4){
+            counter=1;
+        }
+    },5000)
+    </script>
+
+</body>
+</html>
